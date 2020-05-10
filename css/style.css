@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+}
+/* navbar */
+.navbar {
+  background-color: black;
+  height: 60px;
+  position: relative;
+}
+.navbarBrand {
+  color: white;
+}
+.navbar .linkList {
+  display: inline-block;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  margin: 0;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+.navbar .linkList .options {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+.vertical-align-middle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.navbar .linkList li {
+  display: inline;
+}
+
+.hamburger {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  right: 10px;
+}
+.hamburger li {
+  height: 5px;
+  width: 30px;
+  background-color: white;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+@media screen and (max-width: 350px) {
+  .navbar .link-list {
+    display: none;
+  }
+  .hamburger {
+    display: inline-block;
+  }
+}
+/*marquee */
+.marquee-container {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  width: 100%;
+}
+#marquee {
+  display: flex;
+  align-items: center;
+  animation: scroll 20s infinite linear;
+  width: 100%;
+}
+
+@keyframes scroll {
+  100% {
+    -webkit-transform: translate(-100%, 0);
+  }
+}
+.main-part {
+  height: auto;
+  width: 800px;
+  margin-top: 20px;
+  margin-left: 18%;
+}
+.searchComponent {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  border: 2px solid black;
+  box-shadow: 10px 10px 5px lightgray;
+  padding: 10px;
+  padding-bottom: 0px;
+}
+.searchBar {
+  border: 1px solid black;
+  display: flex;
+  width: 100%;
+}
+.searchBox {
+  width: 85%;
+}
+.fa-search {
+  height: 30px;
+  width: 15%;
+}
+
+#resultList {
+  width: 100%;
+  list-style: none;
+  font-size: 18px;
+  padding: inherit;
+}
+.listStyle {
+  padding: 4px;
+  border-bottom: 1px solid lightgrey;
+  margin-top: 15px;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.disapear {
+  display: none !important;
+}
+.company-logo {
+  width: 20px;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.symbolStyling {
+  color: grey;
+  font-size: 12px;
+}
+.percentageStyling {
+  font-size: 12px;
+}
+.highlight {
+  background-color: yellow;
+}
+.button-container {
+  justify-content: flex-end;
+}
+.list-group-item {
+  display: flex !important;
+  text-align: left;
+}
+.list-content {
+  width: 100%;
+}
+.compareContainer {
+  background-color: black;
+  height: 30px;
+  width: 100px;
+}
+#compareContainer {
+  background-color: black;
+  height: 30px;
+  width: 100px;
+}
+#CompareClasses {
+  width: 100%;
+  height: 72px;
+  margin-bottom: 10px;
+  display: inline-block;
+  justify-content: center;
+}
+.comparing {
+  margin-left: 5px;
+  width: auto;
+  display: inline-block;
+}
+.exitCompany {
+  height: 20px;
+  width: 20px;
+  margin-left: 5px;
+  background-color: black !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.compareCompanies {
+  height: 50px !important;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <link rel="stylesheet" href="css/company.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>company stock</title>
+  </head>
+
+  <body>
+    <div class="row">
+      <nav class="navbar col-12 navbar-expand-lg">
+        <h1 class="navbarBrand" href="#">Gab's Stock Exchange</h1>
+        <ul class="linkList vertical-align-middle">
+          <li>
+            <a class="options" href="#">Home</a>
+          </li>
+          <li>
+            <a class="options" href="#">About</a>
+          </li>
+          <li>
+            <a class="options" href="#">Contact</a>
+          </li>
+          <li>
+            <a class="options" href="#">Buy Stocks</a>
+          </li>
+        </ul>
+        <ul class="hamburger vertical-align-middle">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="marquee-container" id="marquee"></div>
+
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <div class="d-flex">
+          <div class="col-md-12 stockExchange" id="stockExchange"></div>
+        </div>
+      </div>
+      <div class="col-2"></div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/marquee.js"></script>
+    <script src="js/company.js"></script>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const symbolString = urlParams.toString();
+      const symbol = symbolString.split("=")[1];
+      const companyInformation = new Company(
+        symbol,
+        document.getElementById("stockExchange")
+      );
+    </script>
+  </body>
+</html>
